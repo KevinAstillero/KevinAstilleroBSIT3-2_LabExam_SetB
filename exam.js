@@ -1,20 +1,20 @@
 const read = require ('./read')
 const add = require ('./add')
-const write = require ('./write')
+
 
 const data = process.argv
 
 
-if (data[2]){
+if (data[1]){
     note = {
-        Employee: data [3],
-        Role: data [4],
-        Department: data [5]
+        Employee: data [2],
+        Role: data [3],
+        Department: data [4]
     }
     var oldNote = read()
     add (note, oldNote)
     
 }
-if (data[2] == 'read'){
+if (data[1] == 'read'){
     present(read())
 }
